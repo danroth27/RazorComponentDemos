@@ -18,7 +18,7 @@
     ElementRef buttonElem;
     bool isFirstRender = true;
 
-    public override void SetParameters(ParameterCollection parameters)
+    public override async Task SetParametersAsync(ParameterCollection parameters)
     {
         ChildContent = parameters.GetValueOrDefault<RenderFragment>(nameof(ChildContent));
         Class = parameters.GetValueOrDefault<string>("class");
@@ -61,7 +61,7 @@
     void OnClickTargetStateHasChanged()
     {
         // Workaround for event routing bug
-        if (OnClickTarget is BlazorComponent targetComponent)
+        if (OnClickTarget is ComponentBase targetComponent)
         {
             targetComponent.GetType().GetMethod(nameof(StateHasChanged), System.Reflection.BindingFlags.NonPublic | System.Reflection.BindingFlags.Instance)
                 .Invoke(targetComponent, null);
