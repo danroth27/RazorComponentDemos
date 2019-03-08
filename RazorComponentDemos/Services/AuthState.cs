@@ -1,4 +1,4 @@
-﻿namespace RazorComponentDemos.App.Services
+﻿namespace RazorComponentDemos.Services
 {
     public class AuthState
     {

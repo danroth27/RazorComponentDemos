@@ -2,7 +2,7 @@
 using System.Collections.Generic;
 using System.Threading.Tasks;
 
-namespace RazorComponentDemos.App.Services
+namespace RazorComponentDemos.Services
 {
     public class DefaultProductsRepository : IProductsRepository
     {

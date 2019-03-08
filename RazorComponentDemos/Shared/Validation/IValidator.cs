@@ -1,4 +1,4 @@
-﻿namespace RazorComponentDemos.App.Shared.Validation
+﻿namespace RazorComponentDemos.Shared.Validation
 {
     public interface IValidator
     {

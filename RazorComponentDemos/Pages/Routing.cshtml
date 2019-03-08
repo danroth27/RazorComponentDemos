@@ -20,7 +20,7 @@
     .my-links a.active { background-color: yellow; }
 </style>
 
-<MdcButton onclick=@(async () => { await Task.Delay(1000); uriHelper.NavigateTo("counter"); })>
+<MdcButton onclick=@(async () => { Console.WriteLine("here"); await Task.Delay(1000); uriHelper.NavigateTo("counter"); })>
     Programmatic navigation
 </MdcButton>
 
